@@ -133,8 +133,9 @@ GameObject:
   - component: {fileID: 428840638}
   - component: {fileID: 428840637}
   - component: {fileID: 428840636}
+  - component: {fileID: 428840641}
   m_Layer: 0
-  m_Name: Cube 2
+  m_Name: ChaserCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44d82c5677f42c94ea5af52e6de62d91, type: 2}
+  - {fileID: 2100000, guid: 89b66d51296330f43b2b35e6fdd640fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,6 +230,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428840641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428840635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9e8fe44caaa734996878cafc3c4fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTransform: {fileID: 709879348}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +341,7 @@ GameObject:
   - component: {fileID: 709879349}
   - component: {fileID: 709879350}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: PlayerCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
