@@ -6,7 +6,7 @@ using UnityEngine;
 public class CubeBehaviour : MonoBehaviour
 {
     private readonly float speed = 10.0f;
-    private readonly float jumpSpeed = 4.0f;
+    private readonly float jumpSpeed = 8.0f;
     private Vector3 jumpVector;
     private Vector3 leftVector;
     private Vector3 rightVector;
@@ -14,7 +14,7 @@ public class CubeBehaviour : MonoBehaviour
     private Vector3 backwardVector;
     private Rigidbody rb;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         jumpVector = new Vector3(0.0f, jumpSpeed, 0.0f);
@@ -25,12 +25,16 @@ public class CubeBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        updatePosition();
+        UpdatePosition();
     }
 
-    private void updatePosition()
+    private float GetDistanceBetweenTwoPoints(float x1, float y1, float x2, float y2) {
+        return Mathf.Sqrt(Mathf.Pow(x2 - x1, 2.0f) + Mathf.Pow(y2 - y1, 2.0f));
+    }
+
+    private void UpdatePosition()
     {
         Vector3 pos = this.transform.position;
         Vector3 moveDirection = Vector3.zero;
