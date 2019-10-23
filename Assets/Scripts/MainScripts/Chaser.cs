@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chaser : MonoBehaviour
 {
     public Transform targetTransform;
-    private float speed = 7.0f;
+    float speed = 7.0f;
 
     // Update is called once per frame
     void Update()
