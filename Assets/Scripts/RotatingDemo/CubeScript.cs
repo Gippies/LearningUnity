@@ -5,16 +5,19 @@ using UnityEngine;
 public class CubeScript : MonoBehaviour
 {
     public Transform sphereTransform;
+    // Acts as an offset
+    float PiOver2 = Mathf.PI / 2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        sphereTransform.parent = transform;
+        // sphereTransform.parent = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles += Vector3.up * 180 * Time.deltaTime;
+        transform.Rotate(Vector3.up * 180 * Time.deltaTime, Space.World);
+        sphereTransform.localScale = Vector3.one * (Mathf.Sin(transform.eulerAngles.y * Mathf.Deg2Rad + PiOver2) + 2.0f);
     }
 }
