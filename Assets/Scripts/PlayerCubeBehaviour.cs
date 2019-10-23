@@ -31,7 +31,7 @@ public class PlayerCubeBehaviour : MonoBehaviour
         Vector3 direction = input.normalized;
         Vector3 velocity = direction * speed;
 
-        transform.Translate(velocity * Time.deltaTime);
+        transform.Translate(velocity * Time.deltaTime, Space.World);
 
          if (Input.GetKeyDown("space")) {
              rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);

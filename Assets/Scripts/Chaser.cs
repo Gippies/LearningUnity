@@ -14,17 +14,13 @@ public class Chaser : MonoBehaviour
         Vector3 directionToTarget = displacementFromTarget.normalized;
         Vector3 velocity = directionToTarget * speed;
 
-        Vector3 displacementAwayFromTarget = transform.position - targetTransform.position;
-        Vector3 directionAwayFromTarget = displacementAwayFromTarget.normalized;
-        Vector3 moveAwayVelocity = directionAwayFromTarget * speed;
-
         float distanceToTarget = displacementFromTarget.magnitude;
         
         if (distanceToTarget > 3.0f) {
-            transform.Translate(velocity * Time.deltaTime);
+            transform.Translate(velocity * Time.deltaTime, Space.World);
         }
         else if (distanceToTarget < 2.0f) {
-            transform.Translate(moveAwayVelocity * Time.deltaTime);
+            transform.Translate(-velocity * Time.deltaTime, Space.World);
         }
     }
 }
