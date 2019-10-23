@@ -15,6 +15,6 @@ public class CubeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles += new Vector3(0, 180 * Time.deltaTime, 0);
+        transform.eulerAngles += Vector3.up * 180 * Time.deltaTime;
     }
 }
