@@ -6,7 +6,7 @@ public class CubeScript : MonoBehaviour
 {
     public Transform sphereTransform;
     // Acts as an offset
-    float PiOver2 = Mathf.PI / 2f;
+    readonly float PiOver2 = Mathf.PI / 2f;
 
     // Start is called before the first frame update
     void Start()

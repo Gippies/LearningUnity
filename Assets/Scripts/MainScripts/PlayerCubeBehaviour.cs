@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerCubeBehaviour : MonoBehaviour
 {
-    float speed = 10.0f;
-    float jumpSpeed = 8.0f;
+    readonly float speed = 10.0f;
+    readonly float jumpSpeed = 8.0f;
     Rigidbody rb;
 
     // Start is called before the first frame update
